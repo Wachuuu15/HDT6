@@ -12,17 +12,16 @@ public class Producto {
 	private String descrip;
 	 
 	
-	public Producto(String categoria, int cantidad, String descrip) {
+	public Producto(String categoria, String descrip, int cantidad) {
 		setCategoria(categoria);
 		setCantidad(cantidad);
 		setDescrip(descrip);
 	}
-	
-	
 
-	
-	
-	
+
+
+
+
 	public String getCategoria() {
 		return categoria;
 	}
@@ -82,8 +81,9 @@ public class Producto {
 		return "Producto [categoria=" + categoria + ", cantidad=" + cantidad + ", descrip=" + descrip + "]";
 	}
 	
-	
-		
+	public void subtract(int subtractQuantity){
+	    this.cantidad -= subtractQuantity;
+	  }
 		
 		
 }
